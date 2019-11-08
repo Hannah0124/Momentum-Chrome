@@ -3,7 +3,7 @@ body {
 }
 
 body {
-  color: #34495e;
+  color: white;
 }
 
 .form,
@@ -32,4 +32,87 @@ body {
   height: 100%;
   z-index: -1;
   animation: fadeIn 0.5s linear;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  top: 100px;
+}
+
+.js-clock {
+  font-size: 60px;
+}
+
+.js-weather {
+  position: fixed;
+  font-size: 20px;
+  font-weight: bold;
+  right: 0;
+  top: 0;
+  margin: 15px;
+  text-align: right;
+}
+
+.js-icon {
+  position: fixed;
+  right: 55px;
+  top: 3px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.input-name,
+.input-toDoList {
+  font-size: 20px;
+  width: 30%;
+  height: 30px;
+  text-align: center;
+  opacity: 0.5;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.js-greetings {
+  font-size: 45px;
+  margin: 10px;
+}
+
+.delBtn {
+  background-color: transparent;
+  border: 0;
+}
+
+.line-through {
+  text-decoration-line: line-through;
+}
+
+.js-toDoList {
+  font-size: 20px;
+}
+
+.fa-edit {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.fa-edit:hover {
+  color: orange;
+}
+
+.greeting-container {
+  display: inline-flex
+}
+
+.js-toDoList li label {
+  cursor: pointer;
+  font-weight: bold;
 }

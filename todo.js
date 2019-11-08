@@ -7,6 +7,21 @@ const TODOS_LS = 'toDos';
 
 let toDos = [];
 
+function handleCheck(event) {
+  const input_checkbox = event.target;
+  const labelText = input_checkbox.nextSibling 
+
+  // If input has a "checked" attribute
+  if (input_checkbox.checked === true) {
+    // display strikethrough
+    labelText.className = "line-through";
+  } else {
+    // Remove 'checked' & strikethrough
+    input_checkbox.removeAttribute('checked');
+    labelText.className = '';
+  }
+}
+
 function deleteToDo(event) {
   const btn = event.target;
   const li = btn.parentNode;
@@ -27,24 +42,37 @@ function saveToDos() {
   localStorage.setItem(TODOS_LS, JSON.stringify(toDos))
 };
 
+
 function paintToDo(text) {
   const li = document.createElement('li');
   const delBtn = document.createElement('button');
-  const span = document.createElement('span');
+  // const span = document.createElement('span');
   const newId = toDos.length + 1; // =>  0 + 1
   
   delBtn.innerText = "❌";
+  delBtn.className = "delBtn"
   delBtn.addEventListener('click', deleteToDo);
-  span.innerText = text;
+  // span.innerText = text;
 
+  // Add input & label to add a check box
+  const input = document.createElement('input');
+  const label = document.createElement('label');
+  input.type = "checkbox"
+  input.id = text;
+  input.name = text; 
+  label.setAttribute("for", text);
+  label.innerText = text; 
+  input.addEventListener('click', handleCheck);
+  li.appendChild(input);
+  li.appendChild(label);
   li.appendChild(delBtn);
-  li.appendChild(span);
+  // li.appendChild(span);
   li.id = newId;
   toDoList.appendChild(li);
 
   const toDoObj = {
     text,
-    id: newId 
+    id: newId
   }
 
   toDos.push(toDoObj);

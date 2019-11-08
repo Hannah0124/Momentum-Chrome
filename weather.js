@@ -1,4 +1,5 @@
 const weather = document.querySelector('.js-weather');
+const weather_container = document.querySelector('.weather-container');
 
 const API_KEY = 'd07f906a4da48e94608362cc317ea0fd';
 const COORDS = 'coords'
@@ -10,10 +11,18 @@ function getWeather(lat, lon) {
       return response.json();
       // Once json is ready
     }).then(function(json) {
+      
       const temperature = json.main.temp;
       const place = json.name;
-      weather.innerText = `${temperature} @ ${place}`;
 
+      // Create an image icon
+      const icon = json.weather[0].icon;
+      img_tag = document.createElement('img');
+      img_tag.src = `https://openweathermap.org/img/w/${icon}.png`;
+      img_tag.className = 'js-icon';
+      weather_container.appendChild(img_tag);
+
+      weather.innerHTML = `<li>${temperature}°</li> <li>@${place}</li>`;
     });
 };
 
@@ -38,7 +47,7 @@ function handleGeoSuccess(position) {
 };
 
 function handleGeoError() {
-  console.log('Cant access geo locaiton');
+  console.log('Cannot access geo locaiton');
 };
 
 function askForCoords() {
