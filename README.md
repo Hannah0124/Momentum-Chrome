@@ -7,6 +7,9 @@ The site is published at https://hannah0124.github.io/Momentum-Chrome/
 ## Related Class
 Nomad Coders: https://academy.nomadcoders.co/p/javascript-basics-for-absolute-beginners-kr
 
+## Built With
+* [Vanila JS](http://vanilla-js.com/) 
+
 ## Resources
 Color Palette: https://flatuicolors.com/
 Free Images: https://unsplash.com/
