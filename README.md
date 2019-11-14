@@ -11,7 +11,10 @@ To see a demo video, click the screenshot below.
 ## GitHub Page
 The site is published at https://hannah0124.github.io/Momentum-Chrome/
 
+
 <hr>
+
+
 ## Related Class
 Nomad Coders: https://academy.nomadcoders.co/p/javascript-basics-for-absolute-beginners-kr
 
