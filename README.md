@@ -9,7 +9,7 @@ To see a demo video, click the screenshot below.
 </a>
 
 ## GitHub Page
-The site is published at https://hannah0124.github.io/VanilaJS-Momentum-Chrome/
+The site is published at https://hannah0124.github.io/VanillaJS-Momentum-Chrome/
 
 <hr>
 
